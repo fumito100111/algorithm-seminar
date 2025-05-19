@@ -5,3 +5,4 @@ __pycache__
 .docs/script
 Makefile
 submit.sh
+update.sh
