@@ -79,6 +79,7 @@ sh ./update.sh
 
 ### テンプレートを作成
 ```zsh
+git pull origin main
 make create_template DATE=< 開催する日付 (yyyymmdd) >
 
 例 2025/1/1 の場合)
