@@ -3,3 +3,4 @@
 __pycache__
 .docs/template
 .docs/script
+Makefile
