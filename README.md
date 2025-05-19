@@ -79,7 +79,7 @@ sh ./update.sh
 
 ### テンプレートを作成
 ```zsh
-make create_template DATE=< 開催する日付 (yyyy/mm/dd) >
+make create_template DATE=< 開催する日付 (yyyymmdd) >
 
 例 2025/1/1 の場合)
     make create_template DATE=20250101
@@ -133,6 +133,6 @@ sh ./update.sh
 
 ## 禁止事項
 - ChatGPT や GitHub Copilot などの生成AIをコーディングに用いること.
-  
+
 > [!IMPORTANT]
 > ただし, Web サイトで検索することは OK
