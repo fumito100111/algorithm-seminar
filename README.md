@@ -101,7 +101,9 @@ make create_template DATE=< 開催する日付 (yyyymmdd) >
 
 ### 入力ケース & 出力ケースの作成
 yyyymmdd/.tests/inputs の中に入力ケースの空ファイルが作成されている. (デフォルトは 5つのテストケースが用意されている)
+
 同様に, yyyymmdd/.tests/outputs の中に出力ケースの空ファイルが作成されている.
+
 実際に, 入力ケース & 出力ケースを作成し, txtファイルに書き込む.
 
 > [!TIP]
