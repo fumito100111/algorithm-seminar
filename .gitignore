@@ -4,3 +4,4 @@ __pycache__
 .docs/template
 .docs/script
 Makefile
+submit.sh
