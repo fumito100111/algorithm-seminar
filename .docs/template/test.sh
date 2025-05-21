@@ -38,11 +38,11 @@ if [ "$QUESTION" == "all" ]; then
             echo "< 入力ケース $case >\n"
             echo "----- 実行時間 -----"
             time -p {
-                RESULT=$(sh $CURRENT_DIR$DATE/.tests/run.sh $FILE < $CURRENT_DIR$DATE/.tests/inputs/$case.txt)
+                RESULT=$(sh $CURRENT_DIR$DATE/.tests/run.sh $FILE < $CURRENT_DIR$DATE/.tests/inputs/Q$idx/$case.txt)
             }
             echo ""
             RESULT=$(echo $RESULT | tr -d "\n\t" | tr -d " ")
-            if [ "$RESULT" = "$(cat $CURRENT_DIR$DATE/.tests/outputs/$case.txt | tr -d "\n\t" | tr -d " ")" ]; then
+            if [ "$RESULT" = "$(cat $CURRENT_DIR$DATE/.tests/outputs/Q$idx/$case.txt | tr -d "\n\t" | tr -d " ")" ]; then
                 SCORE=$(echo "$SCORE+1" | bc)
                 echo "ooooo 正解 ooooo\n"
                 SCORE_STRING=$SCORE_STRING" o"
@@ -50,9 +50,9 @@ if [ "$QUESTION" == "all" ]; then
                 echo "xxxxx 不正解 xxxxx\n"
                 SCORE_STRING=$SCORE_STRING" x"
             fi
-            echo "入力: $(cat $CURRENT_DIR$DATE/.tests/inputs/$case.txt)\n"
+            echo "入力: $(cat $CURRENT_DIR$DATE/.tests/inputs/Q$idx/$case.txt)\n"
             echo "出力: $RESULT\n"
-            echo "解答: $(cat $CURRENT_DIR$DATE/.tests/outputs/$case.txt)\n"
+            echo "解答: $(cat $CURRENT_DIR$DATE/.tests/outputs/Q$idx/$case.txt)\n"
         done
         echo $SCORE / $TEST_CASES > $CURRENT_DIR$DATE/$USER_NAME/Q$idx/SCORE
         echo "< 採点結果 >\n"
@@ -60,6 +60,10 @@ if [ "$QUESTION" == "all" ]; then
     done
 
 else
+    if [ $QUESTION -lt 1 ] || [ $NUM -lt $QUESTION ]; then
+        echo "問題番号が問題の数を超えているか, 0以下です."
+        exit 1
+    fi
     echo "#-----課題 ${QUESTION}------#"
     SCORE=0
     SCORE_STRING=""
@@ -83,11 +87,11 @@ else
         echo "< 入力ケース $case >\n"
         echo "----- 実行時間 -----"
         time -p {
-            RESULT=$(sh $CURRENT_DIR$DATE/.tests/run.sh $FILE < $CURRENT_DIR$DATE/.tests/inputs/$case.txt)
+            RESULT=$(sh $CURRENT_DIR$DATE/.tests/run.sh $FILE < $CURRENT_DIR$DATE/.tests/inputs/Q$QUESTION/$case.txt)
         }
         echo ""
         RESULT=$(echo $RESULT | tr -d "\n\t" | tr -d " ")
-        if [ "$RESULT" = "$(cat $CURRENT_DIR$DATE/.tests/outputs/$case.txt | tr -d "\n\t" | tr -d " ")" ]; then
+        if [ "$RESULT" = "$(cat $CURRENT_DIR$DATE/.tests/outputs/Q$QUESTION/$case.txt | tr -d "\n\t" | tr -d " ")" ]; then
             SCORE=$(echo "$SCORE+1" | bc)
             echo "ooooo 正解 ooooo\n"
             SCORE_STRING=$SCORE_STRING" o"
@@ -95,9 +99,9 @@ else
             echo "xxxxx 不正解 xxxxx\n"
             SCORE_STRING=$SCORE_STRING" x"
         fi
-        echo "入力: $(cat $CURRENT_DIR$DATE/.tests/inputs/$case.txt)\n"
+        echo "入力: $(cat $CURRENT_DIR$DATE/.tests/inputs/Q$QUESTION/$case.txt)\n"
         echo "出力: $RESULT\n"
-        echo "解答: $(cat $CURRENT_DIR$DATE/.tests/outputs/$case.txt)\n"
+        echo "解答: $(cat $CURRENT_DIR$DATE/.tests/outputs/Q$QUESTION/$case.txt)\n"
     done
 
     echo $SCORE / $TEST_CASES > $CURRENT_DIR$DATE/$USER_NAME/Q$QUESTION/SCORE
