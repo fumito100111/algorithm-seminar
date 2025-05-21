@@ -23,6 +23,7 @@ create_template:
 		echo "DATE が設定されていません."; \
 		exit 1; \
 	fi
+	@git pull origin main
 	@python3 $(CURRENT_DIR).docs/script/create_template.py $(CURRENT_DIR) $(DATE) $$(git config user.name)
 	@sh $(CURRENT_DIR).docs/script/update_readme.sh $(CURRENT_DIR) $(DATE)
 
