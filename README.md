@@ -79,10 +79,10 @@ sh ./update.sh
 
 ### テンプレートを作成
 ```zsh
-make create_template DATE=< 開催する日付 (yyyymmdd) >
+make create_template DATE=< 開催する日付 (yyyymmdd) > NUM=< 問題の数 >
 
-例 2025/1/1 の場合)
-    make create_template DATE=20250101
+例 2025/1/1 (問題数 3) の場合)
+    make create_template DATE=20250101 NUM=3
 ```
 
 ### 問題を作成
