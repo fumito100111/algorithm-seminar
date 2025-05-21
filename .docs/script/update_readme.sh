@@ -1,8 +1,9 @@
 #!bin/sh
 
-# 引数から実行するファイル名を取得する (引数0: 実行中のスクリプト名, 引数1: カレントディレクトリ, 引数2: テストするディレクトリの日付)
+# 引数から実行するファイル名を取得する (引数0: 実行中のスクリプト名, 引数1: カレントディレクトリ, 引数2: テストするディレクトリの日付, 引数3: 問題の数)
 CURRENT_DIR=$1
 DATE=$2
+NUM=$3
 
 DATE_TRANSFORMED="$(python3 $CURRENT_DIR.docs/script/transform_date.py $DATE) 13:00 ~"
 echo "$(sed "s/<-----DATE----->/$DATE/g" $CURRENT_DIR$DATE/README.md)" > $CURRENT_DIR$DATE/README.md
@@ -23,3 +24,4 @@ do
     fi
 done
 echo "$(sed "s/<-----PARTICIPANTS----->/$PARTICIPANTS/g" $CURRENT_DIR$DATE/README.md)" > $CURRENT_DIR$DATE/README.md
+echo "$(sed "s/<-----NUM----->/$NUM/g" $CURRENT_DIR$DATE/README.md)" > $CURRENT_DIR$DATE/README.md
