@@ -91,6 +91,7 @@ make create_template DATE=< 開催する日付 (yyyymmdd) >
 
 #### 問題の参考になりそうなサイト
 - [AtCoder.jp](https://atcoder.jp/?lang=ja)
+- [AtCoder.jp 過去のコンテスト](https://atcoder.jp/contests/archive?lang=ja)
 - [AIZU ONLINE JUDGE](https://judge.u-aizu.ac.jp/onlinejudge/)
 
 ### 問題の解答を作成
