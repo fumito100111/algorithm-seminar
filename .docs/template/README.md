@@ -13,7 +13,11 @@
 
 ## ローカルでテストを行いたい場合
 ```zsh
-make test DATE=<-----DATE----->
+問題番号を指定して, テストしたい場合 (問題番号 1 を指定))
+    make test DATE=<-----DATE-----> QUESTION=1
+
+全ての問題をテストしたい場合)
+    make test DATE=<-----DATE----->
 ```
 
 ## 注意点
