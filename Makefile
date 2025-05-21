@@ -23,9 +23,13 @@ create_template:
 		echo "DATE が設定されていません."; \
 		exit 1; \
 	fi
+	@if [ -z $(NUM) ]; then \
+		echo "NUM が設定されていません."; \
+		exit 1; \
+	fi
 	@git pull origin main
-	@python3 $(CURRENT_DIR).docs/script/create_template.py $(CURRENT_DIR) $(DATE) $$(git config user.name)
-	@sh $(CURRENT_DIR).docs/script/update_readme.sh $(CURRENT_DIR) $(DATE)
+	@python3 $(CURRENT_DIR).docs/script/create_template.py $(CURRENT_DIR) $(DATE) $$(git config user.name) $(NUM)
+	@sh $(CURRENT_DIR).docs/script/update_readme.sh $(CURRENT_DIR) $(DATE) $(NUM)
 
 remove:
 	@if [ -z $(DATE) ]; then \
@@ -50,4 +54,8 @@ test:
 		echo "DATE が設定されていません."; \
 		exit 1; \
 	fi
-	@sh $(CURRENT_DIR)$(DATE)/.tests/test.sh $(CURRENT_DIR) $$(git config user.name) $(DATE)
+	@if [ -z $(QUESTION) ]; then \
+		sh $(CURRENT_DIR)$(DATE)/.tests/test.sh $(CURRENT_DIR) $$(git config user.name) $(DATE) all; \
+	else \
+		sh $(CURRENT_DIR)$(DATE)/.tests/test.sh $(CURRENT_DIR) $$(git config user.name) $(DATE) $(QUESTION); \
+	fi
