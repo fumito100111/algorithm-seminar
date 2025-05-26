@@ -1,0 +1,54 @@
+name: GitHub Actions
+
+on:
+  label:
+    types:
+      - edited
+  push:
+    paths:
+      - '20250530/**'
+      - '!.github/workflows/actions.yml'
+      - '!20250530/tests/**'
+      - '!20250530/README.md'
+
+jobs:
+  Algorithm-Seminar-2025-05-30:
+    if: contains(github.event.head_commit.message, 'Algorithm-Seminar-2025-05-30')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Test 1
+        id: test1
+        env:
+          TZ: "Asia/Tokyo"
+        run: |
+          ./20250530/tests/Q1/test.sh ${{ github.actor }}
+        timeout-minutes: 5
+        continue-on-error: true
+
+      - name: Test 2
+        id: test2
+        env:
+          TZ: "Asia/Tokyo"
+        run: |
+          ./20250530/tests/Q2/test.sh ${{ github.actor }}
+        timeout-minutes: 5
+        continue-on-error: true
+
+      - name: Test 3
+        id: test3
+        env:
+          TZ: "Asia/Tokyo"
+        run: |
+          ./20250530/tests/Q3/test.sh ${{ github.actor }}
+        timeout-minutes: 5
+        continue-on-error: true
+
+      - name: Report Algorithm-Seminar-2025-05-30
+        env:
+          TZ: "Asia/Tokyo"
+        run: |
+          ./scripts/reporter.sh ${{ steps.test1.outcome }} ${{ steps.test2.outcome }} ${{ steps.test3.outcome }}
+
