@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 if [ "$#" -eq 0 ]; then
     echo "ファイルを指定してください."
     echo "$(basename "$0") < ファイルの絶対パス >"
@@ -22,7 +22,7 @@ if [ "$FILE_EXT" = "c" ]; then
         exit 1
     fi
 
-    $EXE_FILE  < "${INPUT_FILE}"
+    "./${EXE_FILE}"  < "${INPUT_FILE}"
     if [ "$?" -ne "0" ]; then
         echo "実行エラー"
         exit 1
@@ -38,7 +38,7 @@ elif [ "$FILE_EXT" = "cpp" ] || [ "$FILE_EXT" = "cc" ] || [ "$FILE_EXT" = "cxx" 
         exit 1
     fi
 
-    $EXE_FILE < "${INPUT_FILE}"
+    "./${EXE_FILE}" < "${INPUT_FILE}"
     if [ "$?" -ne "0" ]; then
         echo "実行エラー"
         exit 1
@@ -78,7 +78,7 @@ elif [ "$FILE_EXT" = "rs" ]; then
         exit 1
     fi
 
-    $EXE_FILE < "${INPUT_FILE}"
+    "./${EXE_FILE}" < "${INPUT_FILE}"
     if [ "$?" -ne "0" ]; then
         echo "実行エラー"
         exit 1
