@@ -188,7 +188,9 @@ sed -i "" "s;<-----COMMIT_MESSAGE----->;${JOBS};g" "$GITHUB_ACTIONS_PATH"
 #========== 課題用 README.md の更新 ==========#
 
 cp "${TEMPLATES_DIR}/README.md" "${ASSIGNMENTS_DIR}/README.md"
-sed -i "" "s;<-----DATE_TRANSFORMED----->;${YEAR} / ${MONTH} / ${DAY};g" "${ASSIGNMENTS_DIR}/README.md"
+sed -i "" "s;<-----YEAR----->;${YEAR};g" "${ASSIGNMENTS_DIR}/README.md"
+sed -i "" "s;<-----MONTH----->;${MONTH};g" "${ASSIGNMENTS_DIR}/README.md"
+sed -i "" "s;<-----DAY----->;${DAY};g" "${ASSIGNMENTS_DIR}/README.md"
 
 
 CREATOR="$(git config user.name)"
