@@ -82,5 +82,9 @@ else
     git commit -m "Delete Assignment on ${YEAR}/${MONTH}/${DAY}"
 fi
 
-git pull --rebase origin main
+git stash -u &> /dev/null
+git pull origin main
 git push origin main
+if [ "$(git stash list)" != "" ]; then
+    git stash pop stash@{0}
+fi
