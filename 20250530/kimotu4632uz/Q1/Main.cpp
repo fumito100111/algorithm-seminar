@@ -1,4 +1,5 @@
 # include <iostream>
+#include <vector>
 using namespace std;
 using ll = long long;
 #define all(v) std::ranges::begin((v)), std::ranges::end((v))
