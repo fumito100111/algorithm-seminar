@@ -6,7 +6,7 @@ def main():
         name.append(S)
     
     k = name[:K]
-    k = sorted(k)
+    #k = sorted(k)
 
     for name in k:
         print(name)
