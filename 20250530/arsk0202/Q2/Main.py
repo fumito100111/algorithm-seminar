@@ -1,8 +1,4 @@
 def main():
-    pass
-
-if __name__ == '__main__':
-    main()
     N, K = map(int, input().split())
     name = []
     for _ in range(N):
@@ -14,3 +10,7 @@ if __name__ == '__main__':
 
     for name in k:
         print(name)
+    pass
+
+if __name__ == '__main__':
+    main()
