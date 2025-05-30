@@ -1,8 +1,8 @@
 import heapq
 
 def main():
-    N, K = list(map(int, input().split()))
-    topk_players = heapq.heapify([])
+    N, K = map(int, input().split())
+    topk_players = []
     for i in range(K):
         heapq.heappush(topk_players, input())
     for j in range(K):
