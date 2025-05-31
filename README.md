@@ -60,6 +60,7 @@
 - [buraito](https://github.com/buraito)
 - [Sano-Teppei](https://github.com/Sano-Teppei)
 - [arsk0202](https://github.com/arsk0202)
+- [yushin-H](https://github.com/yushin-H)
 
 ## 講習会の流れ
 1. 出題者による問題についての説明.
