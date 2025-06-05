@@ -40,6 +40,10 @@
     <th>2025 / 05 / 30 (金)</th>
     <th>fumito100111</th>
   </tr>
+  <tr>
+    <th>2025 / 06 / 06 (金)</th>
+    <th>skyamat0</th>
+  </tr>
 </table>
 
 ## 対応言語
