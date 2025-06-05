@@ -10,6 +10,8 @@
   - [講習会の流れ](#講習会の流れ)
   - [ToDo リスト (初回参加者 or ユーザ情報を変更したい方)](#todo-リスト-初回参加者-or-ユーザ情報を変更したい方)
     - [リポジトリを複製 (していない場合のみ)](#リポジトリを複製-していない場合のみ)
+    - [git config user.name の設定](#git-config-username-の設定)
+      - [もし, 設定されていない場合や違う名前の場合, 以下のコマンドで変更する.](#もし-設定されていない場合や違う名前の場合-以下のコマンドで変更する)
     - [ユーザ情報の登録 (初回参加時のみ)](#ユーザ情報の登録-初回参加時のみ)
     - [ユーザ情報の変更](#ユーザ情報の変更)
     - [ユーザ情報の削除](#ユーザ情報の削除)
@@ -61,6 +63,7 @@
 - [Sano-Teppei](https://github.com/Sano-Teppei)
 - [arsk0202](https://github.com/arsk0202)
 - [yushin-H](https://github.com/yushin-H)
+- [Seiya-hub2003](https://github.com/Seiya-hub2003)
 
 ## 講習会の流れ
 1. 出題者による問題についての説明.
@@ -75,6 +78,24 @@
 git clone https://github.com/fumito100111/algorithm-seminar.git
 cd algorithm-seminar (以降のコマンドはこのディレクトリをカレントディレクトリとする.)
 ```
+
+### git config user.name の設定
+```zsh
+git config user.name
+
+例) Github アカウントの識別名が fumito100111 の場合, 以下のように出力される.
+    fumito100111
+```
+
+#### もし, 設定されていない場合や違う名前の場合, 以下のコマンドで変更する.
+```zsh
+git config --global user.name '<Github アカウントの識別名>'
+
+例) Github アカウントの識別名が fumito100111 の場合
+    git config --global user.name 'fumito100111'
+```
+> [!TIP]
+> ```git config user.name``` で Github アカウントの識別名に変更されていることを確認する.
 
 ### ユーザ情報の登録 (初回参加時のみ)
 ```zsh
