@@ -1,6 +1,8 @@
 def main():
-    print("Hello World (Python)")
-    pass
+    x, n = map(int, input().split())
+    print(x)
+    print(n)
 
-if __name__ == '__main__':
-    main()
+    
+
+main()
