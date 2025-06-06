@@ -1,6 +1,10 @@
 def main():
-    print("Hello World (Python)")
-    pass
+    x, n = map(int, input().split())
+    xn = 1
+    for i in range (n):
+        xn = xn*x
 
-if __name__ == '__main__':
-    main()
+    print(xn%1000000)
+
+    
+main()
