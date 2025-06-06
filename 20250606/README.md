@@ -18,7 +18,9 @@
 - [Seiya-hub2003](Seiya-hub2003)
 
 ## 問題
-[リンク先タイトル](問題URL) (問題数: 3 問)
+[繰り返し二乗法（paizaランク A 相当）](https://paiza.jp/works/mondai/binary_exponentiation/binary_exponentiation__square_and_multiply_4/)
+[E - Integer Sequence Fair](https://atcoder.jp/contests/abc228/tasks/abc228_e)
+[D - いろはちゃんとマス目](https://atcoder.jp/contests/abc042/tasks/arc058_b)
 
 > [!TIP]
 > 標準入力の方法が分からない場合, [Qiita (AtCoder+標準入力)](https://qiita.com/search?q=AtCoder+%E6%A8%99%E6%BA%96%E5%85%A5%E5%8A%9B) を参考になる.
