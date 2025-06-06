@@ -6,14 +6,14 @@ on:
       - edited
   push:
     paths:
-      - '20250530/**'
+      - '20250606/**'
       - '!.github/workflows/actions.yml'
-      - '!20250530/tests/**'
-      - '!20250530/README.md'
+      - '!20250606/tests/**'
+      - '!20250606/README.md'
 
 jobs:
-  Algorithm-Seminar-2025-05-30:
-    if: contains(github.event.head_commit.message, 'Algorithm-Seminar-2025-05-30')
+  Algorithm-Seminar-2025-06-06:
+    if: contains(github.event.head_commit.message, 'Algorithm-Seminar-2025-06-06')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -24,7 +24,7 @@ jobs:
         env:
           TZ: "Asia/Tokyo"
         run: |
-          ./20250530/tests/Q1/test.sh ${{ github.actor }}
+          ./20250606/tests/Q1/test.sh ${{ github.actor }}
         timeout-minutes: 5
         continue-on-error: true
 
@@ -33,7 +33,7 @@ jobs:
         env:
           TZ: "Asia/Tokyo"
         run: |
-          ./20250530/tests/Q2/test.sh ${{ github.actor }}
+          ./20250606/tests/Q2/test.sh ${{ github.actor }}
         timeout-minutes: 5
         continue-on-error: true
 
@@ -42,11 +42,11 @@ jobs:
         env:
           TZ: "Asia/Tokyo"
         run: |
-          ./20250530/tests/Q3/test.sh ${{ github.actor }}
+          ./20250606/tests/Q3/test.sh ${{ github.actor }}
         timeout-minutes: 5
         continue-on-error: true
 
-      - name: Report Algorithm-Seminar-2025-05-30
+      - name: Report Algorithm-Seminar-2025-06-06
         env:
           TZ: "Asia/Tokyo"
         run: |
