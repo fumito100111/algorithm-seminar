@@ -65,8 +65,8 @@ do
     fi
     echo -e "< 正解 >\n\n${answer}\n"
 
-    input="$(echo -e "${input}" | tr -d "\n\t")"
-    input="${input//" "/","}"
+#    input="$(echo -e "${input}" | tr -d "\n\t")"
+#    input="${input//" "/","}"
     answer="$(echo -e "${answer}" | tr -d "\n\t")"
     answer="${answer//" "/","}"
     # 実行自体は成功した場合
@@ -77,7 +77,7 @@ do
         if [ "$output" == "$answer" ]; then
             result="${result}${case}"
             echo -e "\n\033[0;32m#===== テストケース ${case}: < 正解 > =====#\033[0;39m\n"
-        
+
         # 不正解の場合
         else
             result="${result}0"
