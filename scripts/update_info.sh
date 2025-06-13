@@ -25,7 +25,7 @@ fi
 git add info.json
 git commit -m "$commit_message"
 git stash -u &> /dev/null
-git pull origin main
+git pull --rebase origin main
 git push origin main
 if [ "$(git stash list)" != "" ]; then
     git stash pop stash@{0}
