@@ -44,6 +44,10 @@
     <th>2025 / 06 / 06 (金)</th>
     <th>skyamat0</th>
   </tr>
+  <tr>
+    <th>2025 / 06 / 13 (金)</th>
+    <th>kimotu4632uz</th>
+  </tr>
 </table>
 
 ## 対応言語
