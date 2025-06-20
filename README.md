@@ -48,6 +48,10 @@
     <th>2025 / 06 / 13 (金)</th>
     <th>kimotu4632uz</th>
   </tr>
+  <tr>
+    <th>2025 / 06 / 20 (金)</th>
+    <th>fumito100111</th>
+  </tr>
 </table>
 
 ## 対応言語
