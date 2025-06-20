@@ -8,8 +8,8 @@
 
 ### 回答者
 <-----PARTICIPANTS----->
-## 問題
-[リンク先タイトル](問題URL) (問題数: <-----ASSIGNMENTS-----> 問)
+## 問題 (問題数: <-----ASSIGNMENTS-----> 問)
+[リンク先タイトル](問題URL)
 
 > [!TIP]
 > 標準入力の方法が分からない場合, [Qiita (AtCoder+標準入力)](https://qiita.com/search?q=AtCoder+%E6%A8%99%E6%BA%96%E5%85%A5%E5%8A%9B) を参考になる.
