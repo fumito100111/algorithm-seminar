@@ -14,6 +14,7 @@ def gcd(a: int, b: int) -> int:
         r = a % b
     return b
 
+
 def main():
     N: int = int(input()) # N の値を入力
     COORDINATES: tuple[tuple[int, int], ...] = tuple([tuple(map(int, input().split())) for _ in range(N)]) # 座標を入力 (要素数: N)
